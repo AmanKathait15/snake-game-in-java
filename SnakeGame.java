@@ -71,7 +71,7 @@ class SnakeGame extends JPanel implements KeyListener,ActionListener
 
 		// draw the title image 
 
-		titleimage = new ImageIcon("snaketitle.jpg");
+		titleimage = new ImageIcon("icons/snaketitle.jpg");
 		titleimage.paintIcon(this,g,25,11);
 
 		//draw border for gameplay
@@ -91,46 +91,46 @@ class SnakeGame extends JPanel implements KeyListener,ActionListener
 		g.setFont(new Font("arial",Font.PLAIN,15));
 		g.drawString("Length: "+length,780,50);
 
-		rightmouth = new ImageIcon("rightmouth.png");
-		leftmouth = new ImageIcon("leftmouth.png");
-		upmouth = new ImageIcon("upmouth.png");
-		downmouth = new ImageIcon("downmouth.png");
+		rightmouth = new ImageIcon("icons/rightmouth.png");
+		leftmouth = new ImageIcon("icons/leftmouth.png");
+		upmouth = new ImageIcon("icons/upmouth.png");
+		downmouth = new ImageIcon("icons/downmouth.png");
 
-		rightmouth = new ImageIcon("rightmouth.png");
+		rightmouth = new ImageIcon("icons/rightmouth.png");
 		rightmouth.paintIcon(this,g,x[0],y[0]);
 
 		for(int i=0; i<length; i++)
 		{
 			if(i==0 && right)
 			{
-				rightmouth = new ImageIcon("rightmouth.png");
+				rightmouth = new ImageIcon("icons/rightmouth.png");
 				rightmouth.paintIcon(this,g,x[i],y[i]);
 			}
 			else if(i==0 && left)
 			{
-				leftmouth = new ImageIcon("leftmouth.png");
+				leftmouth = new ImageIcon("icons/leftmouth.png");
 				leftmouth.paintIcon(this,g,x[i],y[i]);
 			}
 			else if(i==0 && up)
 			{
-				upmouth = new ImageIcon("upmouth.png");
+				upmouth = new ImageIcon("icons/upmouth.png");
 				upmouth.paintIcon(this,g,x[i],y[i]);
 			}
 			else if(i==0 && down)
 			{
-				downmouth = new ImageIcon("downmouth.png");
+				downmouth = new ImageIcon("dicons/ownmouth.png");
 				downmouth.paintIcon(this,g,x[i],y[i]);
 			}
 			if(i!=0)
 			{
-				snakeimage = new ImageIcon("snakeimage.png");
+				snakeimage = new ImageIcon("icons/snakeimage.png");
 				snakeimage.paintIcon(this,g,x[i],y[i]);
 			}
 		}
 
 		for(int i=0; i<3; i++)
 		{
-			enemyimage = new ImageIcon("enemy.png");
+			enemyimage = new ImageIcon("icons/enemy.png");
 			enemyimage.paintIcon(this,g,fxpos[fx[i]],fypos[fy[i]]);
 		}
 
